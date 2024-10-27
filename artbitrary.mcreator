@@ -1,0 +1,706 @@
+{
+  "mod_elements": [
+    {
+      "name": "FirstAbilityOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "first_ability_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/FirstAbilityOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "FirstAbility",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "first_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/network/FirstAbilityMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Immunity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immunity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/ImmunityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AbruptEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrupt_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/AbruptEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "AbruptOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrupt_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/AbruptOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "AbruptEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrupt_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/AbruptEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "Abrupt",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrupt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/potion/AbruptMobEffect.java"
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "StopAttacking",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_attacking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StopAttackingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "StopBreaking",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_breaking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StopBreakingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "StopRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StopRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "StopPlayerUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_player_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StopPlayerUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "StopPlayerUsing2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_player_using_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StopPlayerUsing2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "StopPlayerEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_player_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StopPlayerEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "SecondAbility",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "second_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/network/SecondAbilityMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "SecondAbilityOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "second_ability_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SecondAbilityOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FirstAbilityOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "first_ability_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/FirstAbilityOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "IncreasePower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "increase_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IncreasePowerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "SetIncrease",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_increase",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SetIncreaseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AncientPocketWatch",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_pocket_watch",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/models/item/ancient_pocket_watch.json",
+          "src/main/java/net/mcreator/artbitrary/item/AncientPocketWatchItem.java"
+        ]
+      },
+      "path": "~/Time Stop"
+    },
+    {
+      "name": "ShrapnelExplosion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shrapnel_explosion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/ShrapnelExplosionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "Irontemp2",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "irontemp_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/entity/Irontemp2Entity.java"
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "EdibleIronIngotPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "edible_iron_ingot_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/EdibleIronIngotPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "EdibleIronIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "edible_iron_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/models/item/edible_iron_ingot.json",
+          "src/main/java/net/mcreator/artbitrary/item/EdibleIronIngotItem.java"
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronManEat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_man_eat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronManEatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronManDamaged",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_man_damaged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronManDamagedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronNumEqualString",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_num_equal_string",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronNumEqualStringProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronLevelOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_level_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronLevelOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronResistanceOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_resistance_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronResistanceOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronDisplay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/client/screens/IronDisplayOverlay.java"
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronDisplayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_display_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronDisplayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Immunity",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "immunity",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "locationX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "locationY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "locationZ",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ironman",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "IronLevel",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "IronResistance",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "IronLevelOverlay",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "IronResistanceOverlay",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "key.artbitrary.second_ability": "Second Ability",
+      "item.artbitrary.ancient_pocket_watch": "Ancient Pocket Watch",
+      "key.artbitrary.first_ability": "First Ability",
+      "effect.artbitrary.abrupt": "Abrupt",
+      "item.artbitrary.edible_iron_ingot": "Iron Ingot"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Time Stop",
+        "children": []
+      },
+      {
+        "name": "Slash",
+        "children": []
+      },
+      {
+        "name": "Iron Consumption",
+        "children": []
+      },
+      {
+        "name": "lootbox",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "artbitrary",
+    "modName": "Artbitrary",
+    "version": "1.0.0",
+    "author": "Admin, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "playeranimator"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.artbitrary"
+  },
+  "mcreatorVersion": 202400342716
+}
