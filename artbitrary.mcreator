@@ -488,6 +488,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -690,6 +702,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -716,6 +744,72 @@
           },
           {
             "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "ExtensionPunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extension_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/ExtensionPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "HeightCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "height_check",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/HeightCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
             "type": "number"
           },
           {
@@ -807,6 +901,14 @@
       ],
       "category": "ambient",
       "subtitle": ""
+    },
+    {
+      "name": "timestop",
+      "files": [
+        "146322426-fantasy-card-game-stop-time-sp"
+      ],
+      "category": "ambient",
+      "subtitle": ""
     }
   ],
   "tag_elements": {},
@@ -815,6 +917,7 @@
     "en_us": {
       "key.artbitrary.second_ability": "Second Ability",
       "item.artbitrary.ancient_pocket_watch": "Ancient Pocket Watch",
+      "subtitles.timestop": "",
       "subtitles.dash": "",
       "key.artbitrary.first_ability": "First Ability",
       "effect.artbitrary.abrupt": "Abrupt",

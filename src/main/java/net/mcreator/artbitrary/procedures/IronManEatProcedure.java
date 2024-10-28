@@ -101,8 +101,10 @@ public class IronManEatProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 1, true, true));
+				if (!(entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(MobEffects.ABSORPTION))) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 0, true, true));
+				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")), SoundSource.PLAYERS, 1, 1);

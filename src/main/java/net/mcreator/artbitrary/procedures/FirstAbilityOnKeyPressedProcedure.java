@@ -1,13 +1,19 @@
 package net.mcreator.artbitrary.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.artbitrary.network.ArtbitraryModVariables;
 import net.mcreator.artbitrary.init.ArtbitraryModMobEffects;
@@ -43,7 +49,14 @@ public class FirstAbilityOnKeyPressedProcedure {
 				}
 			}
 		}
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("artbitrary:timestop")), SoundSource.AMBIENT, 1, 1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("artbitrary:timestop")), SoundSource.AMBIENT, 1, 1, false);
+			}
+		}
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(itemstack.getItem(), 1000);
+			_player.getCooldowns().addCooldown(itemstack.getItem(), 10000);
 	}
 }

@@ -15,10 +15,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.artbitrary.network.ArtbitraryModVariables;
@@ -55,37 +53,39 @@ public class DashFallProcedure {
 				for (Entity entityiterator : _entfound) {
 					if ((entityiterator.getCapability(ArtbitraryModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ArtbitraryModVariables.PlayerVariables())).Immunity != (entity
 							.getCapability(ArtbitraryModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ArtbitraryModVariables.PlayerVariables())).Immunity) {
-						entityiterator.push(1, 1, 1);
-						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 3);
-					}
-				}
-			}
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
-				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
-				}
-			}
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 5, 0.2, 0.2, 0.2, 0.1);
-			int horizontalRadiusHemiBot = (int) 3 - 1;
-			int verticalRadiusHemiBot = (int) 3;
-			int yIterationsHemiBot = verticalRadiusHemiBot;
-			for (int i = -yIterationsHemiBot; i <= 0; i++) {
-				if (i == -verticalRadiusHemiBot) {
-					continue;
-				}
-				for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-					for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-								+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-						if (distanceSq <= 1.0) {
-							world.levelEvent(2001, BlockPos.containing(x + xi, y + i, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x, y - 1, z)))));
+						if (entity.getPersistentData().getDouble("DistanceFromGround") > 4.6) {
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 3);
+							entityiterator.setDeltaMovement(new Vec3(0, 0.8, 0));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
+								}
+							}
+							int horizontalRadiusHemiBot = (int) 3 - 1;
+							int verticalRadiusHemiBot = (int) 3;
+							int yIterationsHemiBot = verticalRadiusHemiBot;
+							for (int i = -yIterationsHemiBot; i <= 0; i++) {
+								if (i == -verticalRadiusHemiBot) {
+									continue;
+								}
+								for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
+									for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
+										double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
+												+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
+										if (distanceSq <= 1.0) {
+											world.levelEvent(2001, BlockPos.containing(x + xi, y + i, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x, y - 1, z)))));
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 			}
+			entity.invulnerableTime = 10;
+			entity.getPersistentData().putDouble("DistanceFromGround", 0);
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			} else if (event != null && event.hasResult()) {
