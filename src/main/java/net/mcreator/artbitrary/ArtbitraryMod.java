@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.artbitrary.init.ArtbitraryModTabs;
+import net.mcreator.artbitrary.init.ArtbitraryModSounds;
 import net.mcreator.artbitrary.init.ArtbitraryModMobEffects;
 import net.mcreator.artbitrary.init.ArtbitraryModItems;
 import net.mcreator.artbitrary.init.ArtbitraryModEntities;
@@ -41,6 +42,7 @@ public class ArtbitraryMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		ArtbitraryModSounds.REGISTRY.register(bus);
 
 		ArtbitraryModItems.REGISTRY.register(bus);
 		ArtbitraryModEntities.REGISTRY.register(bus);

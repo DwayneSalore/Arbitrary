@@ -586,6 +586,149 @@
         ]
       },
       "path": "~/Iron Consumption"
+    },
+    {
+      "name": "TurnIronVV",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turn_iron_vv",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/TurnIronVVProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "IronManPassive",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_man_passive",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronManPassiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "DashAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/DashAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "ShiftHoldBuff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shift_hold_buff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/ShiftHoldBuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "DashFall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash_fall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/DashFallProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
     }
   ],
   "variable_elements": [
@@ -648,15 +791,31 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": "\"\""
+    },
+    {
+      "name": "PhysicalAttunement",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "dash",
+      "files": [
+        "slow-wind-sound-effect-108401"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    }
+  ],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "key.artbitrary.second_ability": "Second Ability",
       "item.artbitrary.ancient_pocket_watch": "Ancient Pocket Watch",
+      "subtitles.dash": "",
       "key.artbitrary.first_ability": "First Ability",
       "effect.artbitrary.abrupt": "Abrupt",
       "item.artbitrary.edible_iron_ingot": "Iron Ingot"
@@ -679,6 +838,10 @@
       },
       {
         "name": "lootbox",
+        "children": []
+      },
+      {
+        "name": "Physical Attunement",
         "children": []
       }
     ]

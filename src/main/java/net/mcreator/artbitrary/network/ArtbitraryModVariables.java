@@ -71,6 +71,7 @@ public class ArtbitraryModVariables {
 			clone.locationX = original.locationX;
 			clone.locationY = original.locationY;
 			clone.locationZ = original.locationZ;
+			clone.PhysicalAttunement = original.PhysicalAttunement;
 			if (!event.isWasDeath()) {
 				clone.ironman = original.ironman;
 				clone.IronLevel = original.IronLevel;
@@ -122,6 +123,7 @@ public class ArtbitraryModVariables {
 		public double IronResistance = 0;
 		public String IronLevelOverlay = "\"\"";
 		public String IronResistanceOverlay = "\"\"";
+		public boolean PhysicalAttunement = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -140,6 +142,7 @@ public class ArtbitraryModVariables {
 			nbt.putDouble("IronResistance", IronResistance);
 			nbt.putString("IronLevelOverlay", IronLevelOverlay);
 			nbt.putString("IronResistanceOverlay", IronResistanceOverlay);
+			nbt.putBoolean("PhysicalAttunement", PhysicalAttunement);
 			return nbt;
 		}
 
@@ -155,6 +158,7 @@ public class ArtbitraryModVariables {
 			IronResistance = nbt.getDouble("IronResistance");
 			IronLevelOverlay = nbt.getString("IronLevelOverlay");
 			IronResistanceOverlay = nbt.getString("IronResistanceOverlay");
+			PhysicalAttunement = nbt.getBoolean("PhysicalAttunement");
 		}
 	}
 
@@ -189,6 +193,7 @@ public class ArtbitraryModVariables {
 					variables.IronResistance = message.data.IronResistance;
 					variables.IronLevelOverlay = message.data.IronLevelOverlay;
 					variables.IronResistanceOverlay = message.data.IronResistanceOverlay;
+					variables.PhysicalAttunement = message.data.PhysicalAttunement;
 				}
 			});
 			context.setPacketHandled(true);
