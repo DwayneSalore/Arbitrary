@@ -25,6 +25,10 @@ public class ArtbitraryModTabs {
 
 			tabData.accept(ArtbitraryModItems.ANCIENT_POCKET_WATCH.get());
 
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+
+			tabData.accept(ArtbitraryModItems.SPIKE_SPAWN_EGG.get());
+
 		}
 	}
 }

@@ -823,6 +823,192 @@
         ]
       },
       "path": "~/Physical Attunement"
+    },
+    {
+      "name": "SpikeSolidBoundingBoxCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_solid_bounding_box_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpikeSolidBoundingBoxConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "SpikeOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpikeOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "Spike",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/models/item/spike_spawn_egg.json",
+          "src/main/java/net/mcreator/artbitrary/client/renderer/SpikeRenderer.java",
+          "src/main/java/net/mcreator/artbitrary/entity/SpikeEntity.java",
+          "src/main/java/net/mcreator/artbitrary/entity/model/SpikeModel.java"
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "SpikeOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpikeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "ExplosionShake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_shake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/ExplosionShakeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Iron Consumption"
+    },
+    {
+      "name": "ShakeOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shake_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/ShakeOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shake",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/potion/ShakeMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "SpikeActivation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_activation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpikeActivationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
     }
   ],
   "variable_elements": [
@@ -891,6 +1077,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Shake",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -915,11 +1107,14 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.artbitrary.spike_spawn_egg": "Spike Spawn Egg",
       "key.artbitrary.second_ability": "Second Ability",
       "item.artbitrary.ancient_pocket_watch": "Ancient Pocket Watch",
       "subtitles.timestop": "",
       "subtitles.dash": "",
       "key.artbitrary.first_ability": "First Ability",
+      "entity.artbitrary.spike": "Spike",
+      "effect.artbitrary.shake": "Shake",
       "effect.artbitrary.abrupt": "Abrupt",
       "item.artbitrary.edible_iron_ingot": "Iron Ingot"
     }
