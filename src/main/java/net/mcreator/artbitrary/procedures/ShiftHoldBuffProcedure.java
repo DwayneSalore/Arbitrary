@@ -14,6 +14,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.artbitrary.network.ArtbitraryModVariables;
+
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
@@ -33,14 +35,18 @@ public class ShiftHoldBuffProcedure {
 		if (entity == null)
 			return;
 		if (entity.isShiftKeyDown()) {
-			if (entity.getPersistentData().getDouble("ShiftHold") <= 4) {
-				if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR)) {
-					entity.getPersistentData().putDouble("ShiftHold", (entity.getPersistentData().getDouble("ShiftHold") + 0.1));
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.PLAYERS, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.PLAYERS, 1, 1, false);
+			if ((entity.getCapability(ArtbitraryModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ArtbitraryModVariables.PlayerVariables())).PhysicalAttunement == true) {
+				if ((entity.getCapability(ArtbitraryModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ArtbitraryModVariables.PlayerVariables())).PhysicalStamina >= 1 + entity.getPersistentData().getDouble("ShiftHold")) {
+					if (entity.getPersistentData().getDouble("ShiftHold") <= 4) {
+						if (!((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.AIR)) {
+							entity.getPersistentData().putDouble("ShiftHold", (entity.getPersistentData().getDouble("ShiftHold") + 0.1));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.harp")), SoundSource.PLAYERS, 1, 1, false);
+								}
+							}
 						}
 					}
 				}

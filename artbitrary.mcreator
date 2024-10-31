@@ -1009,6 +1009,222 @@
         ]
       },
       "path": "~/Physical Attunement"
+    },
+    {
+      "name": "PhysicalAttunement",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physical_attunement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PhysicalAttunementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "PhysicalAttunementSet",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physical_attunement_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/command/PhysicalAttunementSetCommand.java"
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "StaminaStandStill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_stand_still",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StaminaStandStillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "StaminaRegenOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_regen_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StaminaRegenOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "StaminaRegen",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/potion/StaminaRegenMobEffect.java"
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "StaminaEat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_eat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StaminaEatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "PaEqualtoPaS",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pa_equalto_pa_s",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PaEqualtoPaSProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "PhysicalAttunementDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physical_attunement_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PhysicalAttunementDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "PhysicalAttunementOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physical_attunement_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PhysicalAttunementOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "PhysicalAttunementOv",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physical_attunement_ov",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/client/screens/PhysicalAttunementOvOverlay.java"
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "StaminaWake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_wake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/StaminaWakeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
+    },
+    {
+      "name": "RoundUpStamina",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "round_up_stamina",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/RoundUpStaminaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Physical Attunement"
     }
   ],
   "variable_elements": [
@@ -1083,6 +1299,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "PhysicalStamina",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "PhysicalStaminaOverlay",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -1113,6 +1341,7 @@
       "subtitles.timestop": "",
       "subtitles.dash": "",
       "key.artbitrary.first_ability": "First Ability",
+      "effect.artbitrary.stamina_regen": "Stamina Regen",
       "entity.artbitrary.spike": "Spike",
       "effect.artbitrary.shake": "Shake",
       "effect.artbitrary.abrupt": "Abrupt",
