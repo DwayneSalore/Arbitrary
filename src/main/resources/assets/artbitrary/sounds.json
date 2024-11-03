@@ -14,5 +14,13 @@
         "stream": false
       }
     ]
+  },
+  "distorted": {
+    "sounds": [
+      {
+        "name": "artbitrary:distortion",
+        "stream": false
+      }
+    ]
   }
 }

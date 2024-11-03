@@ -32,7 +32,7 @@ public class AbruptMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		AbruptOnEffectActiveTickProcedure.execute(entity);
+		AbruptOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

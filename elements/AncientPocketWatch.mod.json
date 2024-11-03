@@ -38,7 +38,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "FirstAbilityOnKeyPressed"
+      "name": "IncreasePower"
     },
     "enableRanged": false,
     "shootConstantly": false,

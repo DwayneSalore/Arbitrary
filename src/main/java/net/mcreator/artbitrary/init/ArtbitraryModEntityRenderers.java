@@ -19,5 +19,6 @@ public class ArtbitraryModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ArtbitraryModEntities.IRONTEMP_2.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ArtbitraryModEntities.SPIKE.get(), SpikeRenderer::new);
+		event.registerEntityRenderer(ArtbitraryModEntities.DISTORTION.get(), ThrownItemRenderer::new);
 	}
 }

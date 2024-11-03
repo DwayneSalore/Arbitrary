@@ -17,4 +17,5 @@ public class ArtbitraryModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ArtbitraryMod.MODID);
 	public static final RegistryObject<SoundEvent> DASH = REGISTRY.register("dash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("artbitrary", "dash")));
 	public static final RegistryObject<SoundEvent> TIMESTOP = REGISTRY.register("timestop", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("artbitrary", "timestop")));
+	public static final RegistryObject<SoundEvent> DISTORTED = REGISTRY.register("distorted", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("artbitrary", "distorted")));
 }

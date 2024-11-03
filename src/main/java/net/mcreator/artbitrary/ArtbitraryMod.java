@@ -19,9 +19,12 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.artbitrary.init.ArtbitraryModTabs;
 import net.mcreator.artbitrary.init.ArtbitraryModSounds;
+import net.mcreator.artbitrary.init.ArtbitraryModParticleTypes;
 import net.mcreator.artbitrary.init.ArtbitraryModMobEffects;
 import net.mcreator.artbitrary.init.ArtbitraryModItems;
 import net.mcreator.artbitrary.init.ArtbitraryModEntities;
+import net.mcreator.artbitrary.init.ArtbitraryModBlocks;
+import net.mcreator.artbitrary.init.ArtbitraryModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -43,13 +46,16 @@ public class ArtbitraryMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		ArtbitraryModSounds.REGISTRY.register(bus);
-
+		ArtbitraryModBlocks.REGISTRY.register(bus);
+		ArtbitraryModBlockEntities.REGISTRY.register(bus);
 		ArtbitraryModItems.REGISTRY.register(bus);
 		ArtbitraryModEntities.REGISTRY.register(bus);
 
 		ArtbitraryModTabs.REGISTRY.register(bus);
 
 		ArtbitraryModMobEffects.REGISTRY.register(bus);
+
+		ArtbitraryModParticleTypes.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

@@ -1,13 +1,17 @@
 {
   "item.artbitrary.spike_spawn_egg": "Spike Spawn Egg",
+  "item.artbitrary.space_cutter": "Space Cutter",
   "key.artbitrary.second_ability": "Second Ability",
+  "effect.artbitrary.stamina_regen": "Stamina Regen",
+  "entity.artbitrary.spike": "Spike",
+  "effect.artbitrary.abrupt": "Abrupt",
+  "item.artbitrary.edible_iron_ingot": "Iron Ingot",
+  "subtitles.distorted": "",
   "item.artbitrary.ancient_pocket_watch": "Ancient Pocket Watch",
   "subtitles.timestop": "",
   "subtitles.dash": "",
   "key.artbitrary.first_ability": "First Ability",
-  "effect.artbitrary.stamina_regen": "Stamina Regen",
-  "entity.artbitrary.spike": "Spike",
+  "block.artbitrary.iron_lootbox": "Iron Lootbox",
   "effect.artbitrary.shake": "Shake",
-  "effect.artbitrary.abrupt": "Abrupt",
-  "item.artbitrary.edible_iron_ingot": "Iron Ingot"
+  "subtitles.distortion": ""
 }

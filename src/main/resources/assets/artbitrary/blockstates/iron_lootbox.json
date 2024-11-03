@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "artbitrary:custom/iron_lootbox_particle"
+    },
+    "facing=east": {
+      "model": "artbitrary:custom/iron_lootbox_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "artbitrary:custom/iron_lootbox_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "artbitrary:custom/iron_lootbox_particle",
+      "y": 270
+    }
+  }
+}

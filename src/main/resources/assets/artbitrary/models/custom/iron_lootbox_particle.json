@@ -1,0 +1,7 @@
+
+{
+  "parent": "artbitrary:displaysettings/lootboxdisplay",
+  "textures": {
+    "particle": "artbitrary:block/lootbox_iron_texture"
+  }
+}

@@ -1,45 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "FirstAbilityOnKeyPressed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "first_ability_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/artbitrary/procedures/FirstAbilityOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Time Stop"
-    },
-    {
       "name": "FirstAbility",
       "type": "keybind",
       "compiles": true,
@@ -102,6 +63,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -288,14 +265,14 @@
       }
     },
     {
-      "name": "FirstAbilityOnKeyReleased",
+      "name": "IncreasePower",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "first_ability_on_key_released",
+      "registry_name": "increase_power",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/artbitrary/procedures/FirstAbilityOnKeyReleasedProcedure.java"
+          "src/main/java/net/mcreator/artbitrary/procedures/IncreasePowerProcedure.java"
         ],
         "dependencies": [
           {
@@ -319,20 +296,6 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Time Stop"
-    },
-    {
-      "name": "IncreasePower",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "increase_power",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/artbitrary/procedures/IncreasePowerProcedure.java"
-        ],
-        "dependencies": []
       },
       "path": "~/Time Stop"
     },
@@ -1225,6 +1188,422 @@
         ]
       },
       "path": "~/Physical Attunement"
+    },
+    {
+      "name": "IronLootboxOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_lootbox_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IronLootboxOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/lootbox"
+    },
+    {
+      "name": "IronLootbox",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_lootbox",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/block/renderer/IronLootboxTileRenderer.java",
+          "src/main/java/net/mcreator/artbitrary/block/entity/IronLootboxTileEntity.java",
+          "src/main/java/net/mcreator/artbitrary/block/model/IronLootboxDisplayModel.java",
+          "src/main/java/net/mcreator/artbitrary/block/renderer/IronLootboxDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/artbitrary/block/IronLootboxBlock.java",
+          "src/main/java/net/mcreator/artbitrary/block/display/IronLootboxDisplayItem.java",
+          "src/main/resources/assets/artbitrary/models/item/iron_lootbox.json",
+          "src/main/resources/assets/artbitrary/models/custom/iron_lootbox_particle.json",
+          "src/main/java/net/mcreator/artbitrary/block/model/IronLootboxBlockModel.java",
+          "src/main/resources/assets/artbitrary/blockstates/iron_lootbox.json"
+        ]
+      },
+      "path": "~/lootbox"
+    },
+    {
+      "name": "CommandAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/CommandAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "SetAbility",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/command/SetAbilityCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "CommandIron",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_iron",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/CommandIronProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "SpaceCutter",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_cutter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/models/item/space_cutter.json",
+          "src/main/java/net/mcreator/artbitrary/item/SpaceCutterItem.java"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "SpacialDifference",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spacial_difference",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/particles/spacial_difference.json",
+          "src/main/java/net/mcreator/artbitrary/client/particle/SpacialDifferenceParticle.java"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "SpaceCutterEntitySwingsItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_cutter_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpaceCutterEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "Purple",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/client/particle/PurpleParticle.java",
+          "src/main/resources/assets/artbitrary/particles/purple.json"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "Pink",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/particles/pink.json",
+          "src/main/java/net/mcreator/artbitrary/client/particle/PinkParticle.java"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "Purple2",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/client/particle/Purple2Particle.java",
+          "src/main/resources/assets/artbitrary/particles/purple_2.json"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "Black",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/client/particle/BlackParticle.java",
+          "src/main/resources/assets/artbitrary/particles/black.json"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "DistortionProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distortion_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/DistortionProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "DistortionWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distortion_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/DistortionWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "Distortion",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "distortion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/entity/DistortionEntity.java"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "SlashMake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slash_make",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SlashMakeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "White",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/particles/white.json",
+          "src/main/java/net/mcreator/artbitrary/client/particle/WhiteParticle.java"
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "SpaceCutterLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_cutter_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpaceCutterLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Space Cutter"
+    },
+    {
+      "name": "DamageDealt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_dealt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/DamageDealtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dev"
+    },
+    {
+      "name": "SpaceCutterRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_cutter_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/SpaceCutterRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Space Cutter"
     }
   ],
   "variable_elements": [
@@ -1311,6 +1690,24 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": "\"\""
+    },
+    {
+      "name": "playerx",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "playery",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "playerz",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1329,23 +1726,39 @@
       ],
       "category": "ambient",
       "subtitle": ""
+    },
+    {
+      "name": "distorted",
+      "files": [
+        "distortion"
+      ],
+      "category": "player",
+      "subtitle": ""
     }
   ],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:SpaceCutter"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "item.artbitrary.spike_spawn_egg": "Spike Spawn Egg",
+      "item.artbitrary.space_cutter": "Space Cutter",
       "key.artbitrary.second_ability": "Second Ability",
+      "effect.artbitrary.stamina_regen": "Stamina Regen",
+      "entity.artbitrary.spike": "Spike",
+      "effect.artbitrary.abrupt": "Abrupt",
+      "item.artbitrary.edible_iron_ingot": "Iron Ingot",
+      "subtitles.distorted": "",
       "item.artbitrary.ancient_pocket_watch": "Ancient Pocket Watch",
       "subtitles.timestop": "",
       "subtitles.dash": "",
       "key.artbitrary.first_ability": "First Ability",
-      "effect.artbitrary.stamina_regen": "Stamina Regen",
-      "entity.artbitrary.spike": "Spike",
+      "block.artbitrary.iron_lootbox": "Iron Lootbox",
       "effect.artbitrary.shake": "Shake",
-      "effect.artbitrary.abrupt": "Abrupt",
-      "item.artbitrary.edible_iron_ingot": "Iron Ingot"
+      "subtitles.distortion": ""
     }
   },
   "foldersRoot": {
@@ -1369,6 +1782,18 @@
       },
       {
         "name": "Physical Attunement",
+        "children": []
+      },
+      {
+        "name": "Command",
+        "children": []
+      },
+      {
+        "name": "Space Cutter",
+        "children": []
+      },
+      {
+        "name": "Dev",
         "children": []
       }
     ]

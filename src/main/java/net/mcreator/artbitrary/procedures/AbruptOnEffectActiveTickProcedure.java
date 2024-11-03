@@ -2,13 +2,16 @@ package net.mcreator.artbitrary.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.ParticleTypes;
 
 public class AbruptOnEffectActiveTickProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double location = 0;
@@ -35,5 +38,7 @@ public class AbruptOnEffectActiveTickProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles(ParticleTypes.ENCHANT, x, y, z, 30, (entity.getBbWidth() / 2), (entity.getBbHeight() / 2), (entity.getBbWidth() / 2), 0.1);
 	}
 }

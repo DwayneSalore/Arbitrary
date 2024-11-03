@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.artbitrary.entity.SpikeEntity;
 import net.mcreator.artbitrary.entity.Irontemp2Entity;
+import net.mcreator.artbitrary.entity.DistortionEntity;
 import net.mcreator.artbitrary.ArtbitraryMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,6 +28,8 @@ public class ArtbitraryModEntities {
 			EntityType.Builder.<Irontemp2Entity>of(Irontemp2Entity::new, MobCategory.MISC).setCustomClientFactory(Irontemp2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<SpikeEntity>> SPIKE = register("spike",
 			EntityType.Builder.<SpikeEntity>of(SpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpikeEntity::new).fireImmune().sized(1f, 1.8f));
+	public static final RegistryObject<EntityType<DistortionEntity>> DISTORTION = register("distortion",
+			EntityType.Builder.<DistortionEntity>of(DistortionEntity::new, MobCategory.MISC).setCustomClientFactory(DistortionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

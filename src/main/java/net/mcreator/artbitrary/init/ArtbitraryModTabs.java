@@ -29,6 +29,10 @@ public class ArtbitraryModTabs {
 
 			tabData.accept(ArtbitraryModItems.SPIKE_SPAWN_EGG.get());
 
+		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+
+			tabData.accept(ArtbitraryModItems.SPACE_CUTTER.get());
+
 		}
 	}
 }
