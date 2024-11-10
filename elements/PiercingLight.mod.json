@@ -1,0 +1,27 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.GLOWSTONE_DUST"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelpiercinglight",
+    "customModelTexture": "piercinglight.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsEntity": {
+      "name": "PiercingLightProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "PiercingLightWhileProjectileFlyingTick"
+    }
+  }
+}

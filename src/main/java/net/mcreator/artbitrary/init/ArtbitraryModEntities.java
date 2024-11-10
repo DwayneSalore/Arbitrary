@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.artbitrary.entity.SpikeEntity;
+import net.mcreator.artbitrary.entity.PiercingLightEntity;
 import net.mcreator.artbitrary.entity.Irontemp2Entity;
 import net.mcreator.artbitrary.entity.DistortionEntity;
 import net.mcreator.artbitrary.ArtbitraryMod;
@@ -30,6 +31,8 @@ public class ArtbitraryModEntities {
 			EntityType.Builder.<SpikeEntity>of(SpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpikeEntity::new).fireImmune().sized(1f, 1.8f));
 	public static final RegistryObject<EntityType<DistortionEntity>> DISTORTION = register("distortion",
 			EntityType.Builder.<DistortionEntity>of(DistortionEntity::new, MobCategory.MISC).setCustomClientFactory(DistortionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<PiercingLightEntity>> PIERCING_LIGHT = register("piercing_light",
+			EntityType.Builder.<PiercingLightEntity>of(PiercingLightEntity::new, MobCategory.MISC).setCustomClientFactory(PiercingLightEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

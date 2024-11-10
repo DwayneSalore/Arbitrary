@@ -21,4 +21,6 @@ public class ArtbitraryModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> PURPLE_2 = REGISTRY.register("purple_2", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> BLACK = REGISTRY.register("black", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> WHITE = REGISTRY.register("white", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> YELLOW = REGISTRY.register("yellow", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> YELLOW_1 = REGISTRY.register("yellow_1", () -> new SimpleParticleType(false));
 }

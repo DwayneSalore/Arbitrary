@@ -1,5 +1,6 @@
 {
   "item.artbitrary.spike_spawn_egg": "Spike Spawn Egg",
+  "item.artbitrary.orb_of_light": "Orb Of Light",
   "item.artbitrary.space_cutter": "Space Cutter",
   "key.artbitrary.second_ability": "Second Ability",
   "effect.artbitrary.stamina_regen": "Stamina Regen",
@@ -12,6 +13,7 @@
   "subtitles.dash": "",
   "key.artbitrary.first_ability": "First Ability",
   "block.artbitrary.iron_lootbox": "Iron Lootbox",
+  "effect.artbitrary.pierced": "Pierced",
   "effect.artbitrary.shake": "Shake",
   "subtitles.distortion": ""
 }

@@ -1604,6 +1604,187 @@
         ]
       },
       "path": "~/Space Cutter"
+    },
+    {
+      "name": "PiercingLight",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercing_light",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/entity/PiercingLightEntity.java",
+          "src/main/java/net/mcreator/artbitrary/client/renderer/PiercingLightRenderer.java"
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "OrbOfLightRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orb_of_light_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/OrbOfLightRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "OrbOfLight",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orb_of_light",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/item/OrbOfLightItem.java",
+          "src/main/resources/assets/artbitrary/models/item/orb_of_light.json"
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "PiercingLightWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercing_light_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PiercingLightWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "PiercedOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pierced_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PiercedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "Pierced",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pierced",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/potion/PiercedMobEffect.java"
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "PiercingLightProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercing_light_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PiercingLightProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "Yellow",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/particles/yellow.json",
+          "src/main/java/net/mcreator/artbitrary/client/particle/YellowParticle.java"
+        ]
+      },
+      "path": "~/Piercing Light"
+    },
+    {
+      "name": "Yellow1",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/client/particle/Yellow1Particle.java",
+          "src/main/resources/assets/artbitrary/particles/yellow_1.json"
+        ]
+      },
+      "path": "~/Piercing Light"
     }
   ],
   "variable_elements": [
@@ -1745,6 +1926,7 @@
   "language_map": {
     "en_us": {
       "item.artbitrary.spike_spawn_egg": "Spike Spawn Egg",
+      "item.artbitrary.orb_of_light": "Orb Of Light",
       "item.artbitrary.space_cutter": "Space Cutter",
       "key.artbitrary.second_ability": "Second Ability",
       "effect.artbitrary.stamina_regen": "Stamina Regen",
@@ -1757,6 +1939,7 @@
       "subtitles.dash": "",
       "key.artbitrary.first_ability": "First Ability",
       "block.artbitrary.iron_lootbox": "Iron Lootbox",
+      "effect.artbitrary.pierced": "Pierced",
       "effect.artbitrary.shake": "Shake",
       "subtitles.distortion": ""
     }
@@ -1794,6 +1977,10 @@
       },
       {
         "name": "Dev",
+        "children": []
+      },
+      {
+        "name": "Piercing Light",
         "children": []
       }
     ]

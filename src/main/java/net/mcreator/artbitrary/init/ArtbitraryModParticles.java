@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.artbitrary.client.particle.YellowParticle;
+import net.mcreator.artbitrary.client.particle.Yellow1Particle;
 import net.mcreator.artbitrary.client.particle.WhiteParticle;
 import net.mcreator.artbitrary.client.particle.SpacialDifferenceParticle;
 import net.mcreator.artbitrary.client.particle.PurpleParticle;
@@ -26,5 +28,7 @@ public class ArtbitraryModParticles {
 		event.registerSpriteSet(ArtbitraryModParticleTypes.PURPLE_2.get(), Purple2Particle::provider);
 		event.registerSpriteSet(ArtbitraryModParticleTypes.BLACK.get(), BlackParticle::provider);
 		event.registerSpriteSet(ArtbitraryModParticleTypes.WHITE.get(), WhiteParticle::provider);
+		event.registerSpriteSet(ArtbitraryModParticleTypes.YELLOW.get(), YellowParticle::provider);
+		event.registerSpriteSet(ArtbitraryModParticleTypes.YELLOW_1.get(), Yellow1Particle::provider);
 	}
 }

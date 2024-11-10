@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.artbitrary.client.renderer.SpikeRenderer;
+import net.mcreator.artbitrary.client.renderer.PiercingLightRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ArtbitraryModEntityRenderers {
@@ -20,5 +21,6 @@ public class ArtbitraryModEntityRenderers {
 		event.registerEntityRenderer(ArtbitraryModEntities.IRONTEMP_2.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ArtbitraryModEntities.SPIKE.get(), SpikeRenderer::new);
 		event.registerEntityRenderer(ArtbitraryModEntities.DISTORTION.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(ArtbitraryModEntities.PIERCING_LIGHT.get(), PiercingLightRenderer::new);
 	}
 }
