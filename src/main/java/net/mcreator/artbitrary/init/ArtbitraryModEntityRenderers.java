@@ -22,5 +22,6 @@ public class ArtbitraryModEntityRenderers {
 		event.registerEntityRenderer(ArtbitraryModEntities.SPIKE.get(), SpikeRenderer::new);
 		event.registerEntityRenderer(ArtbitraryModEntities.DISTORTION.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ArtbitraryModEntities.PIERCING_LIGHT.get(), PiercingLightRenderer::new);
+		event.registerEntityRenderer(ArtbitraryModEntities.BLUE_FIRE.get(), ThrownItemRenderer::new);
 	}
 }

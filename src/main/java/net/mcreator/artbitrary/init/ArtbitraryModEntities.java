@@ -20,6 +20,7 @@ import net.mcreator.artbitrary.entity.SpikeEntity;
 import net.mcreator.artbitrary.entity.PiercingLightEntity;
 import net.mcreator.artbitrary.entity.Irontemp2Entity;
 import net.mcreator.artbitrary.entity.DistortionEntity;
+import net.mcreator.artbitrary.entity.BlueFireEntity;
 import net.mcreator.artbitrary.ArtbitraryMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -33,6 +34,8 @@ public class ArtbitraryModEntities {
 			EntityType.Builder.<DistortionEntity>of(DistortionEntity::new, MobCategory.MISC).setCustomClientFactory(DistortionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PiercingLightEntity>> PIERCING_LIGHT = register("piercing_light",
 			EntityType.Builder.<PiercingLightEntity>of(PiercingLightEntity::new, MobCategory.MISC).setCustomClientFactory(PiercingLightEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BlueFireEntity>> BLUE_FIRE = register("blue_fire",
+			EntityType.Builder.<BlueFireEntity>of(BlueFireEntity::new, MobCategory.MISC).setCustomClientFactory(BlueFireEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

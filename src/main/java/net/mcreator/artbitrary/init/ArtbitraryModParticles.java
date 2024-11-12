@@ -16,6 +16,7 @@ import net.mcreator.artbitrary.client.particle.SpacialDifferenceParticle;
 import net.mcreator.artbitrary.client.particle.PurpleParticle;
 import net.mcreator.artbitrary.client.particle.Purple2Particle;
 import net.mcreator.artbitrary.client.particle.PinkParticle;
+import net.mcreator.artbitrary.client.particle.Blue1Particle;
 import net.mcreator.artbitrary.client.particle.BlackParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -30,5 +31,6 @@ public class ArtbitraryModParticles {
 		event.registerSpriteSet(ArtbitraryModParticleTypes.WHITE.get(), WhiteParticle::provider);
 		event.registerSpriteSet(ArtbitraryModParticleTypes.YELLOW.get(), YellowParticle::provider);
 		event.registerSpriteSet(ArtbitraryModParticleTypes.YELLOW_1.get(), Yellow1Particle::provider);
+		event.registerSpriteSet(ArtbitraryModParticleTypes.BLUE_1.get(), Blue1Particle::provider);
 	}
 }

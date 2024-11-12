@@ -90,6 +90,7 @@ public class ArtbitraryModVariables {
 				clone.Shake = original.Shake;
 				clone.PhysicalStamina = original.PhysicalStamina;
 				clone.PhysicalStaminaOverlay = original.PhysicalStaminaOverlay;
+				clone.BFRHeight = original.BFRHeight;
 			}
 		}
 
@@ -272,6 +273,7 @@ public class ArtbitraryModVariables {
 		public double Shake = 0;
 		public double PhysicalStamina = 0;
 		public String PhysicalStaminaOverlay = "\"\"";
+		public double BFRHeight = 2.5;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -294,6 +296,7 @@ public class ArtbitraryModVariables {
 			nbt.putDouble("Shake", Shake);
 			nbt.putDouble("PhysicalStamina", PhysicalStamina);
 			nbt.putString("PhysicalStaminaOverlay", PhysicalStaminaOverlay);
+			nbt.putDouble("BFRHeight", BFRHeight);
 			return nbt;
 		}
 
@@ -313,6 +316,7 @@ public class ArtbitraryModVariables {
 			Shake = nbt.getDouble("Shake");
 			PhysicalStamina = nbt.getDouble("PhysicalStamina");
 			PhysicalStaminaOverlay = nbt.getString("PhysicalStaminaOverlay");
+			BFRHeight = nbt.getDouble("BFRHeight");
 		}
 	}
 
@@ -351,6 +355,7 @@ public class ArtbitraryModVariables {
 					variables.Shake = message.data.Shake;
 					variables.PhysicalStamina = message.data.PhysicalStamina;
 					variables.PhysicalStaminaOverlay = message.data.PhysicalStaminaOverlay;
+					variables.BFRHeight = message.data.BFRHeight;
 				}
 			});
 			context.setPacketHandled(true);

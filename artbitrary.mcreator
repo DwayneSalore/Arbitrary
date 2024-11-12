@@ -1785,6 +1785,185 @@
         ]
       },
       "path": "~/Piercing Light"
+    },
+    {
+      "name": "BFRProjectileShot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bfr_projectile_shot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/BFRProjectileShotProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "Blue1",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/particles/blue_1.json",
+          "src/main/java/net/mcreator/artbitrary/client/particle/Blue1Particle.java"
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "BlueFireWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_fire_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/BlueFireWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "BlueFireProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_fire_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/BlueFireProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "BlueFire",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_fire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/entity/BlueFireEntity.java"
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "IncreaseHeightBFR",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "increase_height_bfr",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/IncreaseHeightBFRProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "Vulnerability",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/potion/VulnerabilityMobEffect.java"
+        ]
+      },
+      "path": "~/Vulnerability"
+    },
+    {
+      "name": "VulnerabilityDamaged",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerability_damaged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/VulnerabilityDamagedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Vulnerability"
     }
   ],
   "variable_elements": [
@@ -1889,6 +2068,12 @@
       "type": "number",
       "scope": "global",
       "value": "0"
+    },
+    {
+      "name": "BFRHeight",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "2.5"
     }
   ],
   "sound_elements": [
@@ -1927,6 +2112,7 @@
     "en_us": {
       "item.artbitrary.spike_spawn_egg": "Spike Spawn Egg",
       "item.artbitrary.orb_of_light": "Orb Of Light",
+      "effect.artbitrary.vulnerability": "Vulnerability",
       "item.artbitrary.space_cutter": "Space Cutter",
       "key.artbitrary.second_ability": "Second Ability",
       "effect.artbitrary.stamina_regen": "Stamina Regen",
@@ -1981,6 +2167,14 @@
       },
       {
         "name": "Piercing Light",
+        "children": []
+      },
+      {
+        "name": "Blue Fire Rain",
+        "children": []
+      },
+      {
+        "name": "Vulnerability",
         "children": []
       }
     ]
