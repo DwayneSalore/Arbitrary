@@ -32,6 +32,7 @@ public class ArtbitraryModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 
 			tabData.accept(ArtbitraryModItems.SPACE_CUTTER.get());
+			tabData.accept(ArtbitraryModItems.PIERCER.get());
 
 		}
 	}

@@ -1964,6 +1964,58 @@
         ]
       },
       "path": "~/Vulnerability"
+    },
+    {
+      "name": "BlueFireProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_fire_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/BlueFireProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "Piercer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/artbitrary/models/item/piercer.json",
+          "src/main/java/net/mcreator/artbitrary/item/PiercerItem.java"
+        ]
+      },
+      "path": "~/Blue Fire Rain"
+    },
+    {
+      "name": "PiercerToolInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercer_tool_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/artbitrary/procedures/PiercerToolInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Blue Fire Rain"
     }
   ],
   "variable_elements": [
@@ -2103,6 +2155,9 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:Piercer"
+    ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:SpaceCutter"
     ]
@@ -2117,6 +2172,7 @@
       "key.artbitrary.second_ability": "Second Ability",
       "effect.artbitrary.stamina_regen": "Stamina Regen",
       "entity.artbitrary.spike": "Spike",
+      "item.artbitrary.piercer": "Piercer",
       "effect.artbitrary.abrupt": "Abrupt",
       "item.artbitrary.edible_iron_ingot": "Iron Ingot",
       "subtitles.distorted": "",

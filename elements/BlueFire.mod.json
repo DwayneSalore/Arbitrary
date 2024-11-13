@@ -20,6 +20,9 @@
     "onHitsBlock": {
       "name": "BlueFireProjectileHitsBlock"
     },
+    "onHitsEntity": {
+      "name": "BlueFireProjectileHitsLivingEntity"
+    },
     "onFlyingTick": {
       "name": "BlueFireWhileProjectileFlyingTick"
     }

@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
@@ -22,6 +23,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.artbitrary.procedures.BlueFireWhileProjectileFlyingTickProcedure;
+import net.mcreator.artbitrary.procedures.BlueFireProjectileHitsLivingEntityProcedure;
 import net.mcreator.artbitrary.procedures.BlueFireProjectileHitsBlockProcedure;
 import net.mcreator.artbitrary.init.ArtbitraryModEntities;
 
@@ -65,6 +67,12 @@ public class BlueFireEntity extends AbstractArrow implements ItemSupplier {
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
+	}
+
+	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		BlueFireProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
 	}
 
 	@Override

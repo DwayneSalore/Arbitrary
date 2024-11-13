@@ -12,6 +12,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.Item;
 
 import net.mcreator.artbitrary.item.SpaceCutterItem;
+import net.mcreator.artbitrary.item.PiercerItem;
 import net.mcreator.artbitrary.item.OrbOfLightItem;
 import net.mcreator.artbitrary.item.EdibleIronIngotItem;
 import net.mcreator.artbitrary.item.AncientPocketWatchItem;
@@ -26,6 +27,7 @@ public class ArtbitraryModItems {
 	public static final RegistryObject<Item> IRON_LOOTBOX = REGISTRY.register(ArtbitraryModBlocks.IRON_LOOTBOX.getId().getPath(), () -> new IronLootboxDisplayItem(ArtbitraryModBlocks.IRON_LOOTBOX.get(), new Item.Properties()));
 	public static final RegistryObject<Item> SPACE_CUTTER = REGISTRY.register("space_cutter", () -> new SpaceCutterItem());
 	public static final RegistryObject<Item> ORB_OF_LIGHT = REGISTRY.register("orb_of_light", () -> new OrbOfLightItem());
+	public static final RegistryObject<Item> PIERCER = REGISTRY.register("piercer", () -> new PiercerItem());
 	// Start of user code block custom items
 	// End of user code block custom items
 }
