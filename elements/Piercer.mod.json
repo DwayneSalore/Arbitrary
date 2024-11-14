@@ -5,7 +5,7 @@
     "toolType": "Special",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "minecraft:blue_candle",
+    "texture": "soulvialanimated",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Piercer",

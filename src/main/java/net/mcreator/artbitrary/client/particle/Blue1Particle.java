@@ -47,8 +47,13 @@ public class Blue1Particle extends TextureSheetParticle {
 	}
 
 	@Override
+	public int getLightColor(float partialTick) {
+		return 15728880;
+	}
+
+	@Override
 	public ParticleRenderType getRenderType() {
-		return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
+		return ParticleRenderType.PARTICLE_SHEET_LIT;
 	}
 
 	@Override
